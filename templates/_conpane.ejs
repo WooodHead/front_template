@@ -1,0 +1,27 @@
+<% var content; %>
+<div class="sta-grid__col<%=content.col %>">
+  <div class="js-fha-title" data-sid="<%=content.SID %>">
+    <div class="sta-com-articlewrap">
+      <article>
+        <a href="javascript:void(0);" class="js-fha-title-launch">
+          <div class="sta-com-auto__imgwrap">
+            <div class="sta-com-auto__img" style="background-image:url(//<%=content.thumb %>?output-quality=80&amp;output-format=jpg);">
+            </div>
+            <img src="../../common/img/common/loading_169.png" alt="<%=content.title %>" width="100%" class="sta-com-auto__bgimg">
+          </div>
+          <div class="<%=content.desc_class %>">
+            <p><%=content.description %></p>
+          </div>
+          <div class="<%=content.date_class %>">
+            <%=content.date %>
+          </div>
+        </a>
+      </article>
+      <div class="sta-com-favbtnbox js-fha-hide-isapp">
+        <p>
+          <a href="javascript:void(0);" class="js-fha-title-bookmark">マイリストに追加</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!-- sta-grid__col<%=content.col %> -->

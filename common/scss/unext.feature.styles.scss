@@ -1,0 +1,223 @@
+@charset 'utf-8';
+@import 'unext.feature.mixin', 'unext.feature.const';
+
+/* ------------------------------------------ File Information
+Author:         y-iyama@unext
+Style Info:     ページ部品
+Prefix:         sta-
+Contents:
+汎用スニペット
+ページ内スニペット
+部品
+配置
+----------------------------------------------------------- */
+
+// ----------------------------------------------------------
+// 汎用スニペット
+// ----------------------------------------------------------
+
+// 特集共通ボタンの色違い作成用-----------------------------
+@mixin sta-defbtm($bg-color: $COLOR_THEME, $bg-color-hover:$COLOR_THEME_BTN_HOVER, $font-color:$COLOR_WHITE) {
+  @include font-l;
+  @include responsive(sp) {
+    height: 3.8rem;
+    line-height: 3.82rem;
+  }
+  display: block;
+  width: 100%;
+  height: 2.9rem;
+  -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;   /* Firefox用 */
+  border-radius: 3px;        /* CSS3草案 */
+  background-color: $bg-color;
+  background-image: url('../../../../common/img/arrow/arrow-fff.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto;
+  line-height: 2.9rem;
+  color: $font-color;
+  text-align: center;
+  a {
+    @include font-l;
+    @include responsive(sp) {
+      height: 3.8rem;
+      line-height: 3.8rem;
+    }
+    display: block;
+    height: 2.9rem;
+    -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */
+    -moz-border-radius: 3px;   /* Firefox用 */
+    border-radius: 3px;        /* CSS3草案 */
+    font-weight: 200;
+    line-height: 2.9rem;
+    color: $font-color;
+  }
+  a:hover {
+    @include opacity;
+    background-color: $bg-color-hover;
+  }
+}
+
+
+
+// ----------------------------------------------------------
+// ページ内部品
+// ----------------------------------------------------------
+//色-----------------------------------------------------
+$COLOR-DR-THEME: #659820;
+$COLOR-DR-THEME2: #ed5174;
+$COLOR-DR-THEME3: #24293c;
+
+//ボタン------------------------------------------------
+.sta-dr-defbtm--color1 {
+  @include sta-defbtm(green, $COLOR-DR-THEME, $COLOR_WHITE);
+}
+.sta-dr-defbtm--color2 {
+  @include sta-defbtm($COLOR-DR-THEME2, $COLOR-DR-THEME2, $COLOR_WHITE);
+}
+
+//全体------------------------------------------------
+.sta-dr-bodywrap {
+  background-color: #000000;
+  @include margin (0, 0, -1px, 0);
+}
+
+//セクション------------------------------------------------
+.sta-dr-section {
+  @include margin (0, 0, $TITLE_MARGIN_BOTTOM, 0);
+  @include clearfix;
+}
+
+//見出し------------------------------------------------
+.sta-dr-hdline {
+  @include margin (0, auto, $DEF_MARGIN_BOTTOM, auto);
+  @include responsive(sp) {
+    @include margin (0, auto, 1.5rem, auto);
+  }
+  text-align: center;
+  &__jp {
+    @include margin (0, auto, .8rem, auto);
+    @include responsive(sp) {
+      max-width: 500px;
+    }
+    max-width: 670px;
+  }
+  &__line {
+    @include margin (0, auto, .8rem, auto);
+    border-bottom: 1px solid $COLOR_WHITE;
+  }
+  &__en {
+    @include margin (0, auto, 0, auto);
+    @include responsive(sp) {
+      max-width: 500px;
+    }
+    max-width: 670px;
+  }
+}
+
+//小見出し------------------------------------------------
+.sta-dr-subhdline {
+  @include margin (0, auto, $DEF_MARGIN_BOTTOM, auto);
+  @include responsive(sp) {
+    @include padding (0, .5rem, 0, .5rem);
+    max-width: 500px;
+  }
+  max-width: 670px;
+}
+
+//動画紹介カード------------------------------------------------
+.sta-dr-videocard {
+  @include margin (0, auto, 4rem, auto);
+  &__bg{
+    @include margin (0, 0, -1px, 0);
+    
+  }
+  &__content {
+    @include padding (1.5rem, 1.3rem, .5rem, 1.3rem);
+    @include clearfix;
+    background-color: $COLOR_WHITE;
+  }
+  &__title {
+    @include font-ll;
+    @include padding (0, 0, 1rem, 0);
+    @include responsive(sp) {
+      min-height: 0;
+    }
+    min-height: 5rem;
+    line-height: 1.44;
+    color: $COLOR-DR-THEME3;
+  }
+  &__text {
+    @include font-m;
+    @include margin (0, 0, 1rem, 0);
+    @include responsive(sp) {
+      min-height: 0;
+    }
+    min-height: 5.5rem;
+    color: $COLOR_BLACK_STRONG;
+  }
+  &__video {
+    @include margin (0, 0, $DEF_MARGIN_BOTTOM, 0);
+    border: 1px solid $COLOR_DARKGRAY;
+    cursor: pointer;
+  }
+  &--last {
+    @include margin (0, auto, 5rem, auto);
+  }
+}
+
+//リード文------------------------------------------------
+.sta-dr-lead {
+  @include margin (0, auto, $TITLE_MARGIN_BOTTOM, auto);
+  @include font-m;
+  @include responsive(sp) {
+    @include margin (0, 1rem, $DEF_MARGIN_BOTTOM, 1rem);
+  }
+  max-width: 670px;
+  line-height: 1.8;
+  color: $COLOR_WHITE;
+}
+
+//メッセージ------------------------------------------------
+.sta-dr-message {
+  overflow: hidden;
+  background-color: $COLOR_WHITE;
+  &__imgwrap {
+    @include margin (0, auto, -1px, auto);
+    position: relative;
+    max-width: 1024px;
+  }
+  .sta-sns-icon--tw {
+    font-size: 32px;
+  }
+  &__twitter--pc {
+    @include transition;
+    @include responsive(sp) {
+      display: none;
+    }
+    position: absolute;
+    bottom: 8%;
+    left: 51%;
+    :hover {
+      @include opacity;
+    }
+  }
+  &__twitter--sp {
+    @include transition;
+    @include padding (3rem, 0, 3rem, 0);
+    display: inline-block;
+    :hover {
+      @include opacity;
+    }
+  }
+  &__snswrap {
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+//フッター------------------------------------------------
+.sta-com-copybox--dr {
+  @include margin (4rem, 0, 4rem, 0);
+}
+

@@ -1,0 +1,20 @@
+<% 
+var text;
+var hashtag;
+var url;
+%>
+<!-- ▼sns -->
+<div class="sta-sns-wrap js-fha-hide-isapp-a">
+  <ul>
+    <li>
+      <a href="https://twitter.com/share?url=<%= url %>&text=<%= text %>｜U-NEXT&hashtags=<%= hashtag %>" target="_blank"> <i class="sta-ico-sns2__tw sta-sns-icon--tw"></i></a>
+    </li>
+    <li>
+      <a href="http://www.facebook.com/share.php?u=<%= url %>" onclick="window.open(encodeURI(decodeURI(this.href)), 'FBwindow', 'width=554, height=470, menubar=no, toolbar=no, scrollbars=yes'); return false;" rel="nofollow"> <i class="sta-ico-sns2__fb sta-sns-icon--fb"></i></a>
+    </li>
+    <li>
+      <a href="http://line.me/R/msg/text/?<%= text %>｜U-NEXT <%= url %>" target="_blank"><i class="sta-ico-sns2__line sta-sns-icon--line"></i></a>
+    </li>
+  </ul>
+</div>
+<!-- ▲sns -->

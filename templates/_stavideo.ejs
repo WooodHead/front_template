@@ -1,0 +1,11 @@
+<% 
+var video;
+%>
+
+<video width="100%" src='<%= video.src_hls %>' poster="<%= video.poster %>" onClick="this.play()" controls preload="none" id="js-movie-v<%= video.id %>--hls" style="display: block">
+</video>
+<video width="100%" poster="<%= video.poster %>" onClick="this.play()" controls preload="none" style="display: none"  id="js-movie-v<%= video.id %>--mp4">
+	<source src="<%= video.src_mp4 %>">
+	<source src="<%= video.src_webm %>">
+	<p>動画を再生するには、videoタグをサポートしたブラウザが必要です。</p>
+</video>

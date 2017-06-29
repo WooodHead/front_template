@@ -1,0 +1,73 @@
+<% var contents = jsonContents;%>
+<% var videos = jsonVideos;
+console.log(videos);
+%>
+<!DOCTYPE html>
+<html lang="ja" data-page-id="feature" data-is-use-ko="">
+<head>
+  <%- include(
+    '_stahead.ejs', 
+    {
+      title         : 'アイドル×U-NEXT=ドルネク！限定コンテンツが続々更新中！｜ U-NEXT',
+      description   : 'アイドル×U-NEXT=ドルネク！でしか見られない独占配信コンテンツが続々更新中！バラエティもライブ映像も盛りだくさん！｜U-NEXT＜動画配信サービス＞',
+      keywords      : '動画配信サービス,U-NEXT,ドルネク,独占配信,オリジナル番組,橋本環奈',
+      url           : 'http://video.unext.jp/feature/cp/doruneku/',
+      sns_title     : 'アイドル×U-NEXT=ドルネク！限定コンテンツが続々更新中！｜ U-NEXT',
+      sns_descript  : 'U-NEXTでしか見られない独占配信アイドルコンテンツを見るならこちら！',
+      sns_thumb     : 'http://video.unext.jp/feature/cp/doruneku/common/img/ogp.jpg'
+    }
+    ); %>
+  </head>
+
+  <body>
+
+    <%- include('_staheader.ejs'); %>
+
+    <div class="sta-grid--r nobtm">
+
+      <!-- コンパネ　No.~-->
+      <% for (var i = 1; i < 4; i++) { %>
+      <%- include('_conpane.ejs', {content:contents[i]}); %>
+      <% } %>
+
+      <%- include('_stavideo.ejs', {video:videos[0]}); %>
+
+
+    </div><!-- sta-grid--r nobtm -->
+
+
+
+
+
+  </body>
+  <script src="../../common/js/jquery-2.0.3.min.js"></script>
+  <script src="../../common/js/unext.fha-feature.js"></script>
+  <script src="../../common/js/unext.analytics.js"></script>
+  <script src="../../common/js/unext.fha.js"></script>
+  <script>
+    var ua = navigator.userAgent;
+    var _d = document;
+    var v1h = _d.getElementById("js-movie-v1--hls");
+    var v1m = _d.getElementById("js-movie-v1--mp4");
+
+    if (( ua.indexOf('iPhone') > 0 ) || ( ua.indexOf('iPad') > 0 ) || ( ua.indexOf('iPod') > 0 )){
+  // iPhone
+  // iPad
+  // iPod
+  v1h.style.display = "block";
+  v1m.style.display = "none";
+  if ( ua.indexOf('iPad') > 0 ) {
+    // iPad
+    v1h.style.width = "1024px";
+    v1h.style.height = "584px";
+    v1h.style.maxWidth = "100%";
+  }
+} else{
+  // other(Android)
+  v1h.style.display = "none";
+  v1m.style.display = "block";
+}
+</script>
+
+
+</html>

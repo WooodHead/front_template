@@ -1,0 +1,41 @@
+<% 
+var description;
+var keywords;
+var title;
+var url;
+var sns_title;
+var sns_descript;
+var sns_thumb;
+ 
+%>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="<%= description %>" />
+<meta name="keywords" content="<%= keywords %>" />
+<title><%= title %></title>
+<!-- sns -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="<%= sns_title %>" />
+<meta property="og:image" content="<%= sns_thumb %>" />
+<meta property="og:url" content="<%= url %>" />
+<meta property="og:description" content="<%= sns_descript %>" />
+<meta property="og:site_name" content="U-NEXT＜ユーネクスト＞" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="fb:admins" content="100007482434935" />
+<meta property="fb:app_id" content="1615543762065866" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@watch_UNEXT" />
+<meta name="twitter:title" content="<%= sns_descript %>" />
+<meta name="twitter:image" content="<%= sns_thumb %>" />
+<meta name="twitter:url" content="<%= url %>" />
+<!-- sns -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<!-- 静的ページCSS参照 -->
+<link rel="stylesheet" href="../../common/css/unext.16feature.css">
+<!-- /静的ページCSS参照 -->
+<!-- 個別ページCSS参照 -->
+<link rel="stylesheet" href="common/css/unext.feature.styles.css">
+<!-- /個別ページCSS参照 -->
+<!-- canonical -->
+<link rel="canonical" href="<%= url %>">
+<!-- /canonical -->

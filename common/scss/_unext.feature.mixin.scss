@@ -1,0 +1,342 @@
+@charset "utf-8";
+/* ---------------------------------------------
+@mixin
+--------------------------------------------- */
+//320px=20em,480px=30em,768px=48em,1024px=64em
+@mixin responsive($media) {
+	// @if $media == sp {
+	// 	@media only screen and (max-width: 500px) { @content; }
+	// }
+	@if $media == sp {
+      	@media only screen and (max-width: 767px) { @content; }
+	}
+	@else if $media == tab {
+      	@media screen and (min-width: 768px) and (max-width: 1023px) { @content; }
+	}
+	@else if $media == pc {
+      	@media screen and (min-width: 1024px) { @content; }
+	}
+}
+
+
+/*コンテンツ画像下の幅*/
+@mixin contentswidth {
+	@include responsive(sp) {
+		width:100%;
+	}
+	@include responsive(tab) {
+		width:768px;
+	}
+	@include responsive(pc) {
+		width:768px;
+	}
+}
+
+/*コンテンツ画像下の幅*/
+@mixin contents128width {
+	@include responsive(sp) {
+		width:100%;
+	}
+	@include responsive(tab) {
+		width:100%;
+	}
+	@include responsive(pc) {
+		width:1280px;
+	}
+}
+
+/*コンテンツ画像下の幅*/
+@mixin contents1024width {
+	@include responsive(sp) {
+		width:100%;
+	}
+	@include responsive(tab) {
+		width:100%;
+	}
+	@include responsive(pc) {
+		width:1024px;
+	}
+}
+
+/*フォントサイズ*/
+@mixin font-size($s:14) {
+    font-size:$s + px;
+    font-size:($s / 10) + rem;
+}
+@mixin font-lllllll {
+	font-size : 3rem;
+}
+@mixin font-llllll {
+	font-size : 2.5rem;
+}
+@mixin font-lllll {
+	font-size : 2rem;
+}
+@mixin font-llll {
+	font-size : 1.75rem;
+}
+@mixin font-lll {
+	font-size : 1.5rem;
+}
+@mixin font-ll {
+	font-size : 1.35rem;
+}
+@mixin font-l {
+	font-size : 1.15rem;
+}
+@mixin font-m {
+	font-size : 1rem;
+}
+@mixin font-s {
+	font-size : 0.9rem;
+}
+@mixin font-ss {
+	font-size : 0.70rem;
+}
+@mixin font-sss {
+	font-size : 0.60rem;
+}
+
+@mixin padding ($t, $r, $b, $l) {
+	padding-top: $t;
+	padding-right: $r;
+	padding-bottom: $b;
+	padding-left: $l;
+}
+
+@mixin margin ($t, $r, $b, $l) {
+	margin-top: $t;
+	margin-right: $r;
+	margin-bottom: $b;
+	margin-left: $l;
+}
+
+@mixin box-shadow {
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+@mixin txt-shadow {
+	-webkit-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	-moz-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+@mixin opacity {
+	filter: alpha(opacity=60);
+	-moz-opacity:0.60;
+	opacity:0.60;
+}
+
+@mixin nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+@mixin borderradius($tl: 3px, $tr: 3px, $bl: 3px, $br: 3px)   {  
+  border-top-left-radius: $tl;
+  border-top-right-radius: $tr;
+  border-bottom-left-radius: $bl;
+  border-bottom-right-radius: $br;
+}
+
+/* <a> */ 
+@mixin likeBtnLink {
+	@include nowrap;
+	background-color: $COLOR_LIGHTGRAY;	/* for IE */
+	background: -webkit-linear-gradient(top, #fbfbfb, #c8c8c8);
+	background: -moz-linear-gradient(top, #fbfbfb, #c8c8c8);
+	background: -o-linear-gradient(top, #fbfbfb, #c8c8c8);
+	background: linear-gradient(top, #fbfbfb, #c8c8c8);
+	color: $COLOR_BLACK_STRONG;
+	&:hover {
+		text-decoration: none;
+		color: $COLOR_BLACK_NORMAL;
+		background-color: $COLOR_LIGHTGRAY;	/* for IE */
+		background: -webkit-linear-gradient(top, #fbfbfb, #e1e1e1);
+		background: -moz-linear-gradient(top, #fbfbfb, #e1e1e1);
+		background: -o-linear-gradient(top, #fbfbfb, #e1e1e1);
+		background: linear-gradient(top, #fbfbfb, #e1e1e1);
+	}
+}
+
+@mixin opacity {
+	-moz-opacity:0.60;
+	opacity:0.60;
+}
+
+@mixin css3($property, $value) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}#{$property}: $value;
+     }
+}
+
+@mixin transition {
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+         -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+
+@mixin translate ($x) {
+  -webkit-transform: translate($x);
+     -moz-transform: translate($x);
+      -ms-transform: translate($x);
+       -o-transform: translate($x);
+          transform: translate($x);
+}
+@mixin translateX ($x) {
+  -webkit-transform: translateX($x);
+     -moz-transform: translateX($x);
+      -ms-transform: translateX($x);
+       -o-transform: translateX($x);
+          transform: translateX($x);
+}
+@mixin translate3d($x, $y, $z) {
+    -webkit-transform: translate3d($x, $y, $z);
+       -moz-transform: translate3d($x, $y, $z);
+        -ms-transform: translate3d($x, $y, $z);
+         -o-transform: translate3d($x, $y, $z);
+            transform: translate3d($x, $y, $z);
+}
+
+@mixin boxshadow($h, $v, $blur, $stretch, $color) {
+	   -moz-box-shadow: $h $v $blur $stretch $color;
+	    -ms-box-shadow: $h $v $blur $stretch $color;
+	     -o-box-shadow: $h $v $blur $stretch $color;
+	-webkit-box-shadow: $h $v $blur $stretch $color;
+	        box-shadow: $h $v $blur $stretch $color;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content:"";
+    display:block;
+    overflow:hidden;
+  }
+  &:after {
+      clear:both;
+  }
+}
+
+@mixin displaybox{
+	display: -webkit-box;
+	display: -moz-box;
+}
+
+
+@mixin boxpadding {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+/*img.titlethumb*/
+@mixin t-thumb-style {
+	border: 1px solid $COLOR_DARKGRAY;	
+	
+}
+
+/*グラデーション*/
+@mixin gradient($start-color, $end-color, $orientation)
+ {
+ background: $start-color;
+ @if $orientation == vertical
+ {
+ // vertical
+	 background: -moz-linear-gradient(top,  $start-color 0%, $end-color 100%);
+	 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-color), color-stop(100%,$end-color));
+	 background: -webkit-linear-gradient(top,  $start-color 0%,$end-color 100%);
+	 background: -o-linear-gradient(top,  $start-color 0%,$end-color 100%);
+	 background: -ms-linear-gradient(top,  $start-color 0%,$end-color 100%);
+	 background: linear-gradient(to bottom,  $start-color 0%,$end-color 100%);
+	 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 );
+ }
+ @else if $orientation == horizontal
+ {
+ // horizontal
+	 background: -moz-linear-gradient(left,  $start-color 0%, $end-color 100%);
+	 background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start-color), color-stop(100%,$end-color));
+	 background: -webkit-linear-gradient(left,  $start-color 0%,$end-color 100%);
+	 background: -o-linear-gradient(left,  $start-color 0%,$end-color 100%);
+	 background: -ms-linear-gradient(left,  $start-color 0%,$end-color 100%);
+	 background: linear-gradient(to right,  $start-color 0%,$end-color 100%);
+	 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+ }
+ @else
+ {
+ // radial
+	 background: -moz-radial-gradient(center, ellipse cover,  $start-color 0%, $end-color 100%);
+	 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$start-color), color-stop(100%,$end-color));
+	 background: -webkit-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+	 background: -o-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+	 background: -ms-radial-gradient(center, ellipse cover,  $start-color 0%,$end-color 100%);
+	 background: radial-gradient(ellipse at center,  $start-color 0%,$end-color 100%);
+	 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
+ }
+}
+
+/*90度回転*/
+@mixin transform-90 {
+	-moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+/*90度回転*/
+@mixin transform90 {
+	-moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+/*180度回転*/
+@mixin transform-180 {
+	-moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+/*ヘッター出没のアニメーション*/
+@keyframes hdr-bg {
+  0% { background: rgba( 255, 255, 255, 0 ); }
+  // 50% { background: rgba( 255, 255, 255, 0.2 ); }
+  100% { background: rgba( 255, 255, 255, 0.9 ); }
+}
+
+ /**
+* 汎用記事枠コンポーネント
+* @param  {Number} $mt:0        PC用margin-top
+* @param  {Number} $mr:0        PC用margin-right
+* @param  {Number} $mb:5rem     PC用margin-bottom
+* @param  {Number} $ml:0        PC用margin-left
+* @param  {Number} $mtsp:0      SP用margin-top
+* @param  {Number} $mrsp:0      SP用margin-right
+* @param  {Number} $mbsp:2.5rem SP用margin-bottom
+* @param  {Number} $mlsp:0      SP用margin-left
+*/
+@mixin articlebox($mt:0, $mr:0, $mb:5rem, $ml:0,
+                 $mtsp:null, $mrsp:null, $mbsp:2.5rem, $mlsp:null) {
+   @if $mtsp == null {$mtsp: $mt}
+   @if $mrsp == null {$mrsp: $mr}
+   @if $mlsp == null {$mlsp: $ml}
+
+   margin: $mt $mr $mb $ml;
+   @include responsive(sp) {
+     margin: $mtsp $mrsp $mbsp $mlsp;
+     padding: 1rem;
+   }
+}
