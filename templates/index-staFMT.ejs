@@ -1,0 +1,46 @@
+<% var contents = jsonContents;%><!-- コンパネ用json読み込み -->
+<% var videos = jsonVideos;%><!-- 埋め込みビデオ用json読み込み -->
+
+<!DOCTYPE html>
+<html lang="ja" data-page-id="feature" data-is-use-ko="">
+<head>
+  <%- include('_stahead.ejs', 
+  {
+    title         : '',
+    description   : '',
+    keywords      : '',
+    url           : '',
+    sns_title     : '',
+    sns_descript  : '',
+    sns_thumb     : ''
+  }); %>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <%- include('_staheader.ejs'); %>
+
+  <div class="sta-body-wrap sta-___-bg"> <!-- 全体背景設定 -->
+    <!-- put eyecatch here (staeyecatch) -->
+    <div class="sta-body-contents--____"><!-- コンテンツ幅設定 (1024など） -->
+      <!-- ===================================== -->
+      <!--         put main contents here        -->
+      <!-- ===================================== -->
+
+      <!-- put copyright here (stacopybox) -->
+
+      <!-- snsボタン -->
+      <%- include('_stasnsbtn.ejs', 
+      {
+        text      : 'aaa',
+        hashtag   : 'aaa',
+        url       : 'aaa'
+      }); %>
+
+    </div><!-- sta-body-contents -->
+  </div><!-- sta-body-wrap -->
+  <!-- put pagetop button here (stapagetopbtn) -->
+</body>
+<!-- スクリプト -->
+<%- include('_stafooterscript.ejs'); %>
+</html>

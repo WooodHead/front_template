@@ -1,19 +1,57 @@
+<!-- コンパネ用json読み込み -->
+<!-- 埋め込みビデオ用json読み込み -->
+
 <!DOCTYPE html>
 <html lang="ja" data-page-id="feature" data-is-use-ko="">
 <head>
-  <title>____｜U-NEXT</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="description" content="____" />
-  <meta name="keywords" content="____、U-NEXT、ユーネクスト、動画配信" />
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title></title>
+<!-- sns -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+<meta property="og:site_name" content="U-NEXT＜ユーネクスト＞" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="fb:admins" content="100007482434935" />
+<meta property="fb:app_id" content="1615543762065866" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@watch_UNEXT" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:image" content="" />
+<meta name="twitter:url" content="" />
+<!-- sns -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<!-- 静的ページCSS参照 -->
+<link rel="stylesheet" href="../../common/css/unext.16feature.css">
+<!-- /静的ページCSS参照 -->
+<!-- 個別ページCSS参照 -->
+<link rel="stylesheet" href="common/css/unext.feature.styles.css">
+<!-- /個別ページCSS参照 -->
+<!-- canonical -->
+<link rel="canonical" href="">
+<!-- /canonical -->
+</head>
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="canonical" href="http://video.unext.jp/feature/cp/____">
-  <!-- put sns meta tags here (stasnsmeta) -->
-  <!-- put css links here (stacsslinks) -->
-</head> 
 <body>
-  <!-- put header here (staheader) -->
+  <!-- ヘッダー -->
+  <!-- sta-com-hdrwrap -->
+<div class="sta-com-hdrwrap js-fha-hide-isapp">
+	<div class="sta-com-hdrglobal">
+		<div class="sta-com-hdr--logo">
+			<a href="/">
+				<span class="sta-ico-unext3"></span>
+			</a>
+		</div>
+	</div>
+</div>
+<!-- /sta-com-hdrwrap -->
+
   <div class="sta-body-wrap sta-___-bg"> <!-- 全体背景設定 -->
     <!-- put eyecatch here (staeyecatch) -->
     <div class="sta-body-contents--____"><!-- コンテンツ幅設定 (1024など） -->
@@ -22,14 +60,60 @@
       <!-- ===================================== -->
 
       <!-- put copyright here (stacopybox) -->
-      <!-- put sns buttons here (stasnsbtns) -->
+
+      <!-- snsボタン -->
+      
+<!-- ▼sns -->
+<div class="sta-sns-wrap js-fha-hide-isapp-a">
+  <ul>
+    <li>
+      <a href="https://twitter.com/share?url=aaa&text=aaa｜U-NEXT&hashtags=aaa" target="_blank"> <i class="sta-ico-sns2__tw sta-sns-icon--tw"></i></a>
+    </li>
+    <li>
+      <a href="http://www.facebook.com/share.php?u=aaa" onclick="window.open(encodeURI(decodeURI(this.href)), 'FBwindow', 'width=554, height=470, menubar=no, toolbar=no, scrollbars=yes'); return false;" rel="nofollow"> <i class="sta-ico-sns2__fb sta-sns-icon--fb"></i></a>
+    </li>
+    <li>
+      <a href="http://line.me/R/msg/text/?aaa｜U-NEXT aaa" target="_blank"><i class="sta-ico-sns2__line sta-sns-icon--line"></i></a>
+    </li>
+  </ul>
+</div>
+<!-- ▲sns -->
+
     </div><!-- sta-body-contents -->
   </div><!-- sta-body-wrap -->
   <!-- put pagetop button here (stapagetopbtn) -->
 </body>
-<!-- put js links here (stajslinks)-->
-<!-- put User Heat Tag here (staheattagscript)-->
-<!-- put Facebook script here (stafacebookscript) -->
+<!-- スクリプト -->
+<!-- ▼JSリンク -->
+<script src="../../common/js/jquery-2.0.3.min.js"></script>
+<script src="../../common/js/unext.fha-feature.js"></script>
+<script src="../../common/js/unext.analytics.js"></script>
+<script src="../../common/js/unext.fha.js"></script>
+
+<!-- ▼User Heat Tag -->
+<script>
+  (function(add, cla){window['UserHeatTag']=cla;window[cla]=window[cla]||function(){(window[cla].q=window[cla].q||[]).push(arguments)},window[cla].l=1*new Date();var ul=document.createElement('script');var tag = document.getElementsByTagName('script')[0];ul.async=1;ul.src=add;tag.parentNode.insertBefore(ul,tag);})('//uh.nakanohito.jp/uhj2/uh.js', '_uhtracker');_uhtracker({id:'uhXf1E1PS2'});
+</script>
+<!-- ▼facebook SDK -->
+<div id="fb-root"></div>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId : '1615543762065866',
+      xfbml : true,
+      version : 'v2.3'
+    });
+  };
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s); js.id = id;
+    js.async = true;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 </html>
-
-

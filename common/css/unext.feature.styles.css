@@ -1,1 +1,320 @@
-@charset "UTF-8";@-webkit-keyframes hdr-bg{0%{background:rgba(255,255,255,0)}100%{background:rgba(255,255,255,.9)}}@keyframes hdr-bg{0%{background:rgba(255,255,255,0)}100%{background:rgba(255,255,255,.9)}}.sta-dr-defbtm--color1{font-size:1.15rem;display:block;width:100%;height:2.9rem;border-radius:3px;background-color:green;background-image:url(../../../../common/img/arrow/arrow-fff.png);background-repeat:no-repeat;background-position:right;background-size:auto;line-height:2.9rem;color:#fff;text-align:center}@media only screen and (max-width:767px){.sta-dr-defbtm--color1{height:3.8rem;line-height:3.82rem}}.sta-dr-defbtm--color1 a{font-size:1.15rem;display:block;height:2.9rem;border-radius:3px;font-weight:200;line-height:2.9rem;color:#fff}@media only screen and (max-width:767px){.sta-dr-defbtm--color1 a{height:3.8rem;line-height:3.8rem}}.sta-dr-defbtm--color1 a:hover{-moz-opacity:.6;opacity:.6;background-color:#659820}.sta-dr-defbtm--color2{font-size:1.15rem;display:block;width:100%;height:2.9rem;border-radius:3px;background-color:#ed5174;background-image:url(../../../../common/img/arrow/arrow-fff.png);background-repeat:no-repeat;background-position:right;background-size:auto;line-height:2.9rem;color:#fff;text-align:center}@media only screen and (max-width:767px){.sta-dr-defbtm--color2{height:3.8rem;line-height:3.82rem}}.sta-dr-defbtm--color2 a{font-size:1.15rem;display:block;height:2.9rem;border-radius:3px;font-weight:200;line-height:2.9rem;color:#fff}@media only screen and (max-width:767px){.sta-dr-defbtm--color2 a{height:3.8rem;line-height:3.8rem}}.sta-dr-defbtm--color2 a:hover{-moz-opacity:.6;opacity:.6;background-color:#ed5174}.sta-dr-bodywrap{background-color:#000;margin-top:0;margin-right:0;margin-bottom:-1px;margin-left:0}.sta-dr-section{margin-top:0;margin-right:0;margin-bottom:6rem;margin-left:0}.sta-dr-section:after,.sta-dr-section:before{content:"";display:block;overflow:hidden}.sta-dr-section:after{clear:both}.sta-dr-hdline{margin-top:0;margin-right:auto;margin-bottom:2.5rem;margin-left:auto;text-align:center}@media only screen and (max-width:767px){.sta-dr-hdline{margin-top:0;margin-right:auto;margin-bottom:1.5rem;margin-left:auto}}.sta-dr-hdline__jp{margin-top:0;margin-right:auto;margin-bottom:.8rem;margin-left:auto;max-width:670px}@media only screen and (max-width:767px){.sta-dr-hdline__jp{max-width:500px}}.sta-dr-hdline__line{margin-top:0;margin-right:auto;margin-bottom:.8rem;margin-left:auto;border-bottom:1px solid #fff}.sta-dr-hdline__en{margin-top:0;margin-right:auto;margin-bottom:0;margin-left:auto;max-width:670px}@media only screen and (max-width:767px){.sta-dr-hdline__en{max-width:500px}}.sta-dr-subhdline{margin-top:0;margin-right:auto;margin-bottom:2.5rem;margin-left:auto;max-width:670px}@media only screen and (max-width:767px){.sta-dr-subhdline{padding-top:0;padding-right:.5rem;padding-bottom:0;padding-left:.5rem;max-width:500px}}.sta-dr-videocard{margin-top:0;margin-right:auto;margin-bottom:4rem;margin-left:auto}.sta-dr-videocard__bg{margin-top:0;margin-right:0;margin-bottom:-1px;margin-left:0}.sta-dr-videocard__content{padding-top:1.5rem;padding-right:1.3rem;padding-bottom:.5rem;padding-left:1.3rem;background-color:#fff}.sta-dr-videocard__content:after,.sta-dr-videocard__content:before{content:"";display:block;overflow:hidden}.sta-dr-videocard__content:after{clear:both}.sta-dr-videocard__title{font-size:1.35rem;padding-top:0;padding-right:0;padding-bottom:1rem;padding-left:0;min-height:5rem;line-height:1.44;color:#24293c}@media only screen and (max-width:767px){.sta-dr-videocard__title{min-height:0}}.sta-dr-videocard__text{font-size:1rem;margin-top:0;margin-right:0;margin-bottom:1rem;margin-left:0;min-height:5.5rem;color:#333}@media only screen and (max-width:767px){.sta-dr-videocard__text{min-height:0}}.sta-dr-videocard__video{margin-top:0;margin-right:0;margin-bottom:2.5rem;margin-left:0;border:1px solid #ebebeb;cursor:pointer}.sta-dr-videocard--last{margin-top:0;margin-right:auto;margin-bottom:5rem;margin-left:auto}.sta-dr-lead{margin-top:0;margin-right:auto;margin-bottom:6rem;margin-left:auto;font-size:1rem;max-width:670px;line-height:1.8;color:#fff}@media only screen and (max-width:767px){.sta-dr-lead{margin-top:0;margin-right:1rem;margin-bottom:2.5rem;margin-left:1rem}}.sta-dr-message{overflow:hidden;background-color:#fff}.sta-dr-message__imgwrap{margin-top:0;margin-right:auto;margin-bottom:-1px;margin-left:auto;position:relative;max-width:1024px}.sta-dr-message .sta-sns-icon--tw{font-size:32px}.sta-dr-message__twitter--pc{-webkit-transition:all .2s ease-out;transition:all .2s ease-out;position:absolute;bottom:8%;left:51%}@media only screen and (max-width:767px){.sta-dr-message__twitter--pc{display:none}}.sta-dr-message__twitter--pc :hover{-moz-opacity:.6;opacity:.6}.sta-dr-message__twitter--sp{-webkit-transition:all .2s ease-out;transition:all .2s ease-out;padding-top:3rem;padding-right:0;padding-bottom:3rem;padding-left:0;display:inline-block}.sta-dr-message__twitter--sp :hover{-moz-opacity:.6;opacity:.6}.sta-dr-message__snswrap{text-align:center;vertical-align:middle}.sta-com-copybox--dr{margin-top:4rem;margin-right:0;margin-bottom:4rem;margin-left:0}
+@charset "UTF-8";
+/* ---------------------------------------------
+@mixin
+--------------------------------------------- */
+/*コンテンツ画像下の幅*/
+/*コンテンツ画像下の幅*/
+/*コンテンツ画像下の幅*/
+/*フォントサイズ*/
+/* <a> */
+/*img.titlethumb*/
+/*グラデーション*/
+/*90度回転*/
+/*90度回転*/
+/*180度回転*/
+/*ヘッター出没のアニメーション*/
+@-webkit-keyframes hdr-bg {
+  0% {
+    background: rgba(255, 255, 255, 0); }
+  100% {
+    background: rgba(255, 255, 255, 0.9); } }
+@keyframes hdr-bg {
+  0% {
+    background: rgba(255, 255, 255, 0); }
+  100% {
+    background: rgba(255, 255, 255, 0.9); } }
+
+/**
+* 汎用記事枠コンポーネント
+* @param  {Number} $mt:0        PC用margin-top
+* @param  {Number} $mr:0        PC用margin-right
+* @param  {Number} $mb:5rem     PC用margin-bottom
+* @param  {Number} $ml:0        PC用margin-left
+* @param  {Number} $mtsp:0      SP用margin-top
+* @param  {Number} $mrsp:0      SP用margin-right
+* @param  {Number} $mbsp:2.5rem SP用margin-bottom
+* @param  {Number} $mlsp:0      SP用margin-left
+*/
+/* ---------------------------------------------
+const
+--------------------------------------------- */
+/* ------------------------------------------ File Information
+Author:         y-iyama@unext
+Style Info:     ページ部品
+Prefix:         sta-
+Contents:
+汎用スニペット
+ページ内スニペット
+部品
+配置
+----------------------------------------------------------- */
+.sta-dr-defbtm--color1 {
+  font-size: 1.15rem;
+  display: block;
+  width: 100%;
+  height: 2.9rem;
+  /* Safari,Google Chrome用 */
+  /* Firefox用 */
+  border-radius: 3px;
+  /* CSS3草案 */
+  background-color: green;
+  background-image: url("../../../../common/img/arrow/arrow-fff.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto;
+  line-height: 2.9rem;
+  color: #FFFFFF;
+  text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .sta-dr-defbtm--color1 {
+      height: 3.8rem;
+      line-height: 3.82rem; } }
+  .sta-dr-defbtm--color1 a {
+    font-size: 1.15rem;
+    display: block;
+    height: 2.9rem;
+    /* Safari,Google Chrome用 */
+    /* Firefox用 */
+    border-radius: 3px;
+    /* CSS3草案 */
+    font-weight: 200;
+    line-height: 2.9rem;
+    color: #FFFFFF; }
+    @media only screen and (max-width: 767px) {
+      .sta-dr-defbtm--color1 a {
+        height: 3.8rem;
+        line-height: 3.8rem; } }
+  .sta-dr-defbtm--color1 a:hover {
+    -moz-opacity: 0.60;
+    opacity: 0.60;
+    background-color: #659820; }
+
+.sta-dr-defbtm--color2 {
+  font-size: 1.15rem;
+  display: block;
+  width: 100%;
+  height: 2.9rem;
+  /* Safari,Google Chrome用 */
+  /* Firefox用 */
+  border-radius: 3px;
+  /* CSS3草案 */
+  background-color: #ed5174;
+  background-image: url("../../../../common/img/arrow/arrow-fff.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto;
+  line-height: 2.9rem;
+  color: #FFFFFF;
+  text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .sta-dr-defbtm--color2 {
+      height: 3.8rem;
+      line-height: 3.82rem; } }
+  .sta-dr-defbtm--color2 a {
+    font-size: 1.15rem;
+    display: block;
+    height: 2.9rem;
+    /* Safari,Google Chrome用 */
+    /* Firefox用 */
+    border-radius: 3px;
+    /* CSS3草案 */
+    font-weight: 200;
+    line-height: 2.9rem;
+    color: #FFFFFF; }
+    @media only screen and (max-width: 767px) {
+      .sta-dr-defbtm--color2 a {
+        height: 3.8rem;
+        line-height: 3.8rem; } }
+  .sta-dr-defbtm--color2 a:hover {
+    -moz-opacity: 0.60;
+    opacity: 0.60;
+    background-color: #ed5174; }
+
+.sta-dr-bodywrap {
+  background-color: #000000;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: -1px;
+  margin-left: 0; }
+
+.sta-dr-section {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 6rem;
+  margin-left: 0; }
+  .sta-dr-section:before, .sta-dr-section:after {
+    content: "";
+    display: block;
+    overflow: hidden; }
+  .sta-dr-section:after {
+    clear: both; }
+
+.sta-dr-hdline {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .sta-dr-hdline {
+      margin-top: 0;
+      margin-right: auto;
+      margin-bottom: 1.5rem;
+      margin-left: auto; } }
+  .sta-dr-hdline__jp {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0.8rem;
+    margin-left: auto;
+    max-width: 670px; }
+    @media only screen and (max-width: 767px) {
+      .sta-dr-hdline__jp {
+        max-width: 500px; } }
+  .sta-dr-hdline__line {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0.8rem;
+    margin-left: auto;
+    border-bottom: 1px solid #FFFFFF; }
+  .sta-dr-hdline__en {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    max-width: 670px; }
+    @media only screen and (max-width: 767px) {
+      .sta-dr-hdline__en {
+        max-width: 500px; } }
+
+.sta-dr-subhdline {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  max-width: 670px; }
+  @media only screen and (max-width: 767px) {
+    .sta-dr-subhdline {
+      padding-top: 0;
+      padding-right: 0.5rem;
+      padding-bottom: 0;
+      padding-left: 0.5rem;
+      max-width: 500px; } }
+
+.sta-dr-videocard {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  margin-left: auto; }
+  .sta-dr-videocard__bg {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: -1px;
+    margin-left: 0; }
+  .sta-dr-videocard__content {
+    padding-top: 1.5rem;
+    padding-right: 1.3rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.3rem;
+    background-color: #FFFFFF; }
+    .sta-dr-videocard__content:before, .sta-dr-videocard__content:after {
+      content: "";
+      display: block;
+      overflow: hidden; }
+    .sta-dr-videocard__content:after {
+      clear: both; }
+  .sta-dr-videocard__title {
+    font-size: 1.35rem;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    padding-left: 0;
+    min-height: 5rem;
+    line-height: 1.44;
+    color: #24293c; }
+    @media only screen and (max-width: 767px) {
+      .sta-dr-videocard__title {
+        min-height: 0; } }
+  .sta-dr-videocard__text {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    min-height: 5.5rem;
+    color: #333333; }
+    @media only screen and (max-width: 767px) {
+      .sta-dr-videocard__text {
+        min-height: 0; } }
+  .sta-dr-videocard__video {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 2.5rem;
+    margin-left: 0;
+    border: 1px solid #ebebeb;
+    cursor: pointer; }
+  .sta-dr-videocard--last {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 5rem;
+    margin-left: auto; }
+
+.sta-dr-lead {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 6rem;
+  margin-left: auto;
+  font-size: 1rem;
+  max-width: 670px;
+  line-height: 1.8;
+  color: #FFFFFF; }
+  @media only screen and (max-width: 767px) {
+    .sta-dr-lead {
+      margin-top: 0;
+      margin-right: 1rem;
+      margin-bottom: 2.5rem;
+      margin-left: 1rem; } }
+
+.sta-dr-message {
+  overflow: hidden;
+  background-color: #FFFFFF; }
+  .sta-dr-message__imgwrap {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: -1px;
+    margin-left: auto;
+    position: relative;
+    max-width: 1024px; }
+  .sta-dr-message .sta-sns-icon--tw {
+    font-size: 32px; }
+  .sta-dr-message__twitter--pc {
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    position: absolute;
+    bottom: 8%;
+    left: 51%; }
+    @media only screen and (max-width: 767px) {
+      .sta-dr-message__twitter--pc {
+        display: none; } }
+    .sta-dr-message__twitter--pc :hover {
+      -moz-opacity: 0.60;
+      opacity: 0.60; }
+  .sta-dr-message__twitter--sp {
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    padding-top: 3rem;
+    padding-right: 0;
+    padding-bottom: 3rem;
+    padding-left: 0;
+    display: inline-block; }
+    .sta-dr-message__twitter--sp :hover {
+      -moz-opacity: 0.60;
+      opacity: 0.60; }
+  .sta-dr-message__snswrap {
+    text-align: center;
+    vertical-align: middle; }
+
+.sta-com-copybox--dr {
+  margin-top: 4rem;
+  margin-right: 0;
+  margin-bottom: 4rem;
+  margin-left: 0; }

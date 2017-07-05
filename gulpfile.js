@@ -9,10 +9,14 @@ var ejs      = require( 'gulp-ejs' );
 var webserver = require('gulp-webserver');
 var replace = require('gulp-replace');
 var htmlbeautify = require('gulp-html-beautify');
+const ejsLint = require('ejs-lint');
 var jsonContents = require('./templates/contents.json');
 var jsonVideos = require('./templates/videos.json');
+var removeHtmlComments = require('gulp-remove-html-comments');
+var removeEmptyLines = require('gulp-remove-empty-lines');
+var cleanCSS = require('gulp-clean-css');
 
-//=======================================================
+//開発用ビルド（継続）=======================================================
 
 gulp.task("default",['server','sass-compile','ejs-compile'], 
 	function() {
@@ -22,7 +26,26 @@ gulp.task("default",['server','sass-compile','ejs-compile'],
 		gulp.watch("./common/*.scss", ['bs-reload']);
 	});
 
-//=======================================================
+//本番用ビルド（単発）=======================================================
+gulp.task('probuild', function() {
+	gulp.src('./index.html')
+	.pipe(removeHtmlComments())
+	.pipe(removeEmptyLines())
+	.pipe(htmlbeautify({
+		"indent_size":"2",
+		"indent_char":" ",
+		"max_preserve_newlines":"1",
+		"unformatted":"video,source"
+	}))
+	.pipe(gulp.dest('./'));
+
+	gulp.src('./common/css/*.css')
+	.pipe(cleanCSS())
+	.pipe(gulp.dest('./common/css/'));
+});
+
+//部品=======================================================
+
 
 gulp.task('sass-compile', function() {
 	gulp.src('./common/scss/*.scss')
@@ -76,26 +99,8 @@ gulp.task("ejs-compile", function() {
 });
 
 
-var removeHtmlComments = require('gulp-remove-html-comments');
-var removeEmptyLines = require('gulp-remove-empty-lines');
-var cleanCSS = require('gulp-clean-css');
 
-gulp.task('probuild', function() {
-	gulp.src('./index.html')
-	.pipe(removeHtmlComments())
-	.pipe(removeEmptyLines())
-	.pipe(htmlbeautify({
-		"indent_size":"2",
-		"indent_char":" ",
-		"max_preserve_newlines":"1",
-		"unformatted":"video,source"
-	}))
-	.pipe(gulp.dest('./'));
 
-	gulp.src('./common/css/*.css')
-	.pipe(cleanCSS())
-	.pipe(gulp.dest('./common/css/'));
-});
 
 
 
